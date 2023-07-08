@@ -158,7 +158,7 @@ then you can configure the template attribute of MailNotifier to be a local file
 
 ![](.README_images/2b649a8a.png)
 
-![](.README_images/e81de201.png)
+![](.README_images/63c9056e.png)
 
 ![](.README_images/0d5e5936.png)
 
