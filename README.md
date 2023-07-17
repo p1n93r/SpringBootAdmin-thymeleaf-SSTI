@@ -1,3 +1,6 @@
+## CVE-2023-38286
+https://nvd.nist.gov/vuln/detail/CVE-2023-38286
+
 ## Impact
 All users who run Spring Boot Admin Server, having enabled MailNotifier and write access to environment variables via UI are possibly affected.
 
