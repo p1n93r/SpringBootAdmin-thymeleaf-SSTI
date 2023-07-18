@@ -1,6 +1,9 @@
 ## CVE-2023-38286
 https://nvd.nist.gov/vuln/detail/CVE-2023-38286
 
+## Additional Vulnerability Description
+The sandbox bypass mentioned here refers to bypassing certain blacklists of Thymeleaf, rather than leveraging the context for reflection-based escapes or similar techniques.
+
 ## Impact
 All users who run Spring Boot Admin Server, having enabled MailNotifier and write access to environment variables via UI are possibly affected.
 
